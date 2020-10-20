@@ -1,0 +1,58 @@
+.:
+итого 4
+drw-rw-r--. 2 george george 37 ноя  9 17:02 dir
+-r--r-----. 1 root   george  5 ноя  9 16:58 file
+-rw-------. 1 george george  0 ноя  9 17:19 file_1
+-rw-rw-rw-. 1 george george  0 ноя  9 17:21 file_2
+
+./dir:
+итого 0
+-????????? ? ? ? ?            ? new_fie
+-????????? ? ? ? ?            ? new_file
+    1  cd
+    2  mkdir test
+    3  cd test
+    4  touch file
+    5  chmod ugo-rwx file
+    6  echo "тест" >> file
+    7  cat file
+    8  chmod u+w file
+    9  ll
+   10  echo "test" >> file
+   11  cat file
+   12  chmod g+r file
+   13  ll
+   14  cat file
+   15  chmod u+r file
+   16  ls -l
+   17  cat file
+   18  mkdir dir
+   19  cd dir
+   20  touch "file 2"
+   21  rm "file 2"
+   22  touch new_fie
+   23  ls
+   24  echo "file 2" >> new_file
+   25  cd ..
+   26  chmod ugo-x dir
+   27  cat dir/new_file
+   28  rm dir/new_file
+   29  man chown
+   30  chown root:root file
+   31  man umask
+   32  umask
+   33  umask -S
+   34  umask u=rw,g-rwx,o-rx
+   35  touch file_1
+   36  ls -l
+   37  umask -S
+   38  umask u=rw,g=rw,o=rw
+   39  touch file_2
+   40  ls -l
+   41  cat file
+   42  ls -lR
+   43  cd 
+   44  touch lab2
+   45  cd test
+   46  ls -lR >> ~/lab2
+   47  history >> ~/lab2
